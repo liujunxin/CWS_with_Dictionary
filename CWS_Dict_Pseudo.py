@@ -619,7 +619,7 @@ def main(saveid=0, dporate=0.5, dataset='msra', tbili=0.01, flb=0.05, fbei=2):
         model.train(trainsens, traincwslabels, trainweight, validsens, validcwslabels, testsens, testcwslabels, sess, savepath=savepath)
         ofilepath = './CWSDictPseudo/result/%scwspseudo_%s_%d.txt' % (saveprefix, savesuffix, saveid)
         predicts = model.giveTestResult(testsens, testcwslabels, sess, ofilepath=ofilepath)
-        ofilepath = './CWSDictPseudo/result/%scwspseudo_%s_%d.txt' % (saveprefix, savesuffix, saveid)
+        ofilepath = './CWSDictPseudo/result/result_%scwspseudo_%s_%d.txt' % (saveprefix, savesuffix, saveid)
         output_CWS_result(predicts, testsens, r_dictionary, ofilepath=ofilepath)
 
 
